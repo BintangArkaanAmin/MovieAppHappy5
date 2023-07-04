@@ -1,4 +1,4 @@
-package com.example.testmovieapphappy5.repository
+package com.example.movieapphappy5.repository.movie
 
 import androidx.annotation.NonNull
 import com.example.testmovieapphappy5.data.detail.DetailMovieResponse

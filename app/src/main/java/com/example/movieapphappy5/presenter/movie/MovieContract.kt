@@ -1,4 +1,4 @@
-package com.example.testmovieapphappy5.presenter
+package com.example.movieapphappy5.presenter.movie
 
 import com.example.testmovieapphappy5.base.BasePresenter
 import com.example.testmovieapphappy5.data.detail.DetailMovieResponse

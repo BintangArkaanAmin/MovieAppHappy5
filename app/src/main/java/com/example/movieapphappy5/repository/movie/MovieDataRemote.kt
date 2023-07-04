@@ -1,4 +1,4 @@
-package com.example.testmovieapphappy5.repository
+package com.example.movieapphappy5.repository.movie
 
 import android.content.Context
 import com.example.testmovieapphappy5.api.APIClient

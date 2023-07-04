@@ -1,14 +1,14 @@
-package com.example.testmovieapphappy5.presenter
+package com.example.movieapphappy5.presenter.movie
 
 import com.example.testmovieapphappy5.data.detail.DetailMovieResponse
 import com.example.testmovieapphappy5.data.list.ResultsItem
-import com.example.testmovieapphappy5.repository.MovieDataResource
-import com.example.testmovieapphappy5.repository.MovieRepository
+import com.example.movieapphappy5.repository.movie.MovieDataResource
+import com.example.movieapphappy5.repository.movie.MovieRepository
 
-class MoviePresenter : MovieContract.moviePresenter{
+class MoviePresenter : MovieContract.moviePresenter {
 
-    private var movieRepository:MovieRepository
-    private lateinit var movieView:MovieContract.movieView
+    private var movieRepository: MovieRepository
+    private lateinit var movieView: MovieContract.movieView
 
     constructor(movieRepository: MovieRepository) {
         this.movieRepository = movieRepository

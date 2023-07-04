@@ -1,4 +1,4 @@
-package com.example.testmovieapphappy5.repository
+package com.example.movieapphappy5.repository.movie
 
 
 class MovieRepository : MovieDataResource {

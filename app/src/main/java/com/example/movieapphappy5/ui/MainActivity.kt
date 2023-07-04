@@ -10,10 +10,10 @@ import com.example.testmovieapphappy5.data.detail.DetailMovieResponse
 import com.example.testmovieapphappy5.data.list.ResultsItem
 import com.example.testmovieapphappy5.databinding.ActivityMainBinding
 import com.example.testmovieapphappy5.di.MovieRepositoryInject
-import com.example.testmovieapphappy5.presenter.MovieContract
-import com.example.testmovieapphappy5.presenter.MoviePresenter
+import com.example.movieapphappy5.presenter.movie.MovieContract
+import com.example.movieapphappy5.presenter.movie.MoviePresenter
 
-class MainActivity : AppCompatActivity(),MovieContract.movieView {
+class MainActivity : AppCompatActivity(), MovieContract.movieView {
     private lateinit var binding: ActivityMainBinding
     private lateinit var moviePresenter: MoviePresenter
     private var movieList: ArrayList<ResultsItem> = ArrayList()
