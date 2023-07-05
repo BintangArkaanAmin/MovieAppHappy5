@@ -11,6 +11,6 @@ class CastContract {
     }
 
     interface castPresenter:BasePresenter<castView>{
-        fun getCast(url:String)
+        fun getCast(url:String, limit: Int)
     }
 }

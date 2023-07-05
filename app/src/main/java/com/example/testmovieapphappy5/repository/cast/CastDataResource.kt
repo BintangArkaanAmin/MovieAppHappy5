@@ -4,7 +4,7 @@ import androidx.annotation.NonNull
 
 
 interface CastDataResource {
-    fun getCast(url:String,@NonNull castCallback: CastCallback)
+    fun getCast(url:String, limit: Int,@NonNull castCallback: CastCallback)
 
     interface CastCallback {
         fun onSuccessCast(castList : ArrayList<String>, msg:String)

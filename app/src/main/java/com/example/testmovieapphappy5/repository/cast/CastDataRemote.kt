@@ -17,7 +17,7 @@ class CastDataRemote : CastDataResource{
     constructor(context: Context) {
         this.apiInterface = APIClient.getRetrofit(context)!!.create(APIInterface::class.java)
     }
-    override fun getCast(url: String, castCallback: CastDataResource.CastCallback) {
+    override fun getCast(url: String, limit: Int, castCallback: CastDataResource.CastCallback) {
         castResponseCall = apiInterface.getCastMovie(url)
         castResponseCall.enqueue(object :Callback<CastResponse>{
             override fun onResponse(call: Call<CastResponse>, response: Response<CastResponse>) {
@@ -28,7 +28,7 @@ class CastDataRemote : CastDataResource{
                         val castItem : List<CastItem> = castResponse!!.cast
                         var count = 0
                         for(item in castItem) {
-                            if (count < 3){
+                            if (count < limit){
                                 var inisialname = ""
                                 for (name:String in item.originalName.split(" ")){
                                     inisialname+=name.get(0)

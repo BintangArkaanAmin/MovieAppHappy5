@@ -13,8 +13,8 @@ class CastPresenter : CastContract.castPresenter {
     }
 
 
-    override fun getCast(url: String) {
-        castRepository.getCast(url, object :CastDataResource.CastCallback{
+    override fun getCast(url: String, limit: Int) {
+        castRepository.getCast(url, limit, object :CastDataResource.CastCallback{
             override fun onSuccessCast(castList: ArrayList<String>, msg: String) {
                 castView.onSuccessCast(castList, msg)
             }

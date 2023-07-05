@@ -17,7 +17,6 @@ import com.example.testmovieapphappy5.databinding.MovieItemBinding
 class MovieAdapter(private val listMovie: MutableList<ResultsItem>) :
     RecyclerView.Adapter<MovieAdapter.ViewHolder>(), CastContract.castView {
 
-    private lateinit var castPresenter: CastPresenter
     private var castList: ArrayList<String> = ArrayList()
     private lateinit var castAdapter: CastAdapter
 
@@ -42,14 +41,15 @@ class MovieAdapter(private val listMovie: MutableList<ResultsItem>) :
                 binding.movieReleaseDate.text = releaseDate
                 binding.movieDesc.text = overview
 
+
                 castAdapter = CastAdapter(castList)
                 binding.rvCast.layoutManager = LinearLayoutManager(holder.itemView.context)
                 binding.rvCast.adapter = castAdapter
 
-                castPresenter =
+                var castPresenter =
                     CastPresenter(CastRepositoryInject.provideTO(holder.itemView.context))
                 castPresenter.onAttachView(this@MovieAdapter)
-                castPresenter.getCast(id.toString() + Server.URL_CAST_MOVIE)
+                castPresenter.getCast(id.toString() + Server.URL_CAST_MOVIE, 3)
                 binding.root.setOnClickListener {
                     itemView.context.startActivity(
                         Intent(

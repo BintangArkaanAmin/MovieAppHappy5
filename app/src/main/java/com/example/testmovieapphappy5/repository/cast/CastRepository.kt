@@ -7,7 +7,7 @@ class CastRepository : CastDataResource{
         this.castDataResource = castDataResource
     }
 
-    override fun getCast(url: String, castCallback: CastDataResource.CastCallback) {
-        castDataResource.getCast(url, castCallback)
+    override fun getCast(url: String, limit: Int, castCallback: CastDataResource.CastCallback) {
+        castDataResource.getCast(url, limit, castCallback)
     }
 }
